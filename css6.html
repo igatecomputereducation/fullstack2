@@ -27,7 +27,6 @@
             border: 1px solid gray;
         }
 
-
         #sec2{
             text-align: center;
             padding:5% 10%;
@@ -64,9 +63,60 @@
             text-align: center;
             font:1.1em calibri;
         }
+
+        #head{
+            padding: 10px 50px;
+            background-color: whitesmoke;
+        }
+
+        #head img{
+            width: 50px;
+        }
+
+        #pno{
+            display: inline-block;
+            float: right;
+            margin-top: 10px;
+            font: 1.2em calibri;
+        }
+
+        #menu{
+            background-color: black;
+            color: white;
+            padding: 20px 50px;
+        }
+        #menu ul{
+            list-style: none;
+            float:right
+        }
+        #menu ul li{
+            display:inline-block;
+            padding:0px 5px;
+        }
+        #menu ul li a{
+            color: whitesmoke;
+            text-decoration: none;
+            font: 1em arial;
+        }
     </style>
 </head>
 <body>
+
+    <div id="head">
+        <img src="./images/apple-icon.png" alt="">
+        <div id="pno">Phno: 8699551978</div>
+        <div style="clear: right;"></div>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#menu">Home</a></li>
+            <li><a href="#sec1">Services</a></li>
+            <li><a href="#sec2">About Us</a></li>
+            <li><a href="#sec3">Contact us</a></li>
+        </ul>
+        <div style="clear: right;"></div>
+    </div>
 
     <div id="sec1">
         <h1>Services</h1>
