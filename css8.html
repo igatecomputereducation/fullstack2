@@ -8,6 +8,26 @@
         body{
             margin: 0px;
         }
+
+        #nav{
+            background-color: black;
+            padding:0px 5%;
+        }
+        #nav ul{
+            list-style: none;
+            display:inline-block;
+            float: right;
+        }
+        #nav ul li{
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 5px;
+        }
+        #nav ul li a{
+            text-decoration: none;
+            color: white;
+            font: 1em calibri;
+        }
         .box{
             padding: 10% 10%;
             color: white;
@@ -29,9 +49,26 @@
             color: white;
             border: 1px solid white;
         }
+        input{
+            padding: 20px;
+            border-radius: 8px;
+            margin: 0px 10px;
+        }
      </style>
 </head>
 <body>
+    <div id="nav">
+        <img src="./images/nexzeralogo.png" alt="">
+        <ul>
+            <li><a href="">Services</a></li>
+            <li><a href="">Delivery</a></li>
+            <li><a href="">Gallary</a></li>
+            <li><a href="">Industry</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+        <div style="clear: right;"></div>
+    </div>
     <div class="box" style="background-color: #910048;">
         <h2>industries</h2>
         <hr width="10%" align="left" color="blue">
@@ -56,13 +93,22 @@
         </p>
         <button>Learn More</button>
     </div>
-    <div class="box" style="background-color: white;color: black;">
+    <div class="box" style="color: black;">
         <h2>NextGen</h2>
         <hr width="10%" align="left" color="blue">
         <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus exercitationem cumque harum dolores amet tempora voluptatem maxime a esse sit consectetur natus, commodi nobis. Sunt voluptates ducimus possimus ad eveniet.
         </p>
         <button style="border: 1px solid black;color: black;">Learn More</button>
+    </div>
+    <div class="box" style="background-color: black;text-align: center;">
+        <h2 align="center" style="text-transform:none;">Contact us</h2>
+        <br><br>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Message">
+        <br><br><br><br><br>
+        <button style="">Send</button>
     </div>
 </body>
 </html>
