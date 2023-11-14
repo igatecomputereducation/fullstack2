@@ -8,7 +8,6 @@
         body{
             margin: 0px;
         }
-
         #nav{
             background-color: black;
             padding:0px 5%;
@@ -50,9 +49,45 @@
             border: 1px solid white;
         }
         input{
-            padding: 20px;
+            padding:15px;
             border-radius: 8px;
-            margin: 0px 10px;
+            margin: 0px 5px;
+        }
+        .inbox{
+            display: inline-block;
+            width:150px;
+            text-align: left;
+        }
+        .inbox ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+        #foot img{
+            width:300px;
+        }
+        #ads{
+            display: inline-block;
+        }
+        #ads ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+        #hero{
+            padding:10%;
+            text-align: center;
+            /* background-image: url('./images/building.jpg');
+            background-position: top center;
+            background-size: cover; */
+            background-color: aqua;
+        }
+        #hero h1,#hero p{
+            font-family: calibri;
+            text-align: center;
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            display: inline-block;
+            margin: 5px 0px;
+            padding: 5px 20px;
         }
      </style>
 </head>
@@ -69,6 +104,11 @@
         </ul>
         <div style="clear: right;"></div>
     </div>
+    <div id="hero">
+        <h1>IoT Advanced Analytics and AI</h1>
+        <p>Tools that will enhance the power of your business</p>
+    </div>
+
     <div class="box" style="background-color: #910048;">
         <h2>industries</h2>
         <hr width="10%" align="left" color="blue">
@@ -109,6 +149,56 @@
         <input type="text" placeholder="Message">
         <br><br><br><br><br>
         <button style="">Send</button>
+    </div>
+    <div class="box" style="background-color: #910048;text-align: center;">
+        <div class="inbox">
+            <ul>
+                <li>Corporate office</li>
+                <li>3067 south</li>
+                <li>hello world</li>
+                <li>igate solutions</li>
+                <li>kavali</li>
+            </ul>
+        </div>
+        <div class="inbox">
+            <ul>
+                <li>Corporate office</li>
+                <li>3067 south</li>
+                <li>hello world</li>
+                <li>igate solutions</li>
+                <li>kavali</li>
+            </ul>
+        </div>
+        <div class="inbox">
+            <ul>
+                <li>Corporate office</li>
+                <li>3067 south</li>
+                <li>hello world</li>
+                <li>igate solutions</li>
+                <li>kavali</li>
+            </ul>
+        </div>
+        <div class="inbox">
+            <ul>
+                <li>Corporate office</li>
+                <li>3067 south</li>
+                <li>hello world</li>
+                <li>igate solutions</li>
+                <li>kavali</li>
+            </ul>
+        </div>
+    </div>
+    <div class="box" id="foot" style="background-color: black;">
+        <img src="./images/nexzera-big.png" alt="">
+        <div id="ads">
+            <b>Contact information</b>
+            <hr>
+            <ul>
+                <li>nexzera@gmail.com</li>
+                <li>9487984756</li>
+                <li>Direction</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
