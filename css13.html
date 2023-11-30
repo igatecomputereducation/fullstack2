@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box{
+            width:50%;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <div class="box">
+        <form name="frm1" autocomplete="off">
+            first <input type="text" name="txt1" autofocus><br><br>
+            second <input type="text" name="txt2"><br><br>
+            sum <input type="text" name="txt3"><br><br>
+            <input type="button" value="Add" onclick="adding();">
+            &nbsp;&nbsp;
+            <input type="button" value="clear" onclick="clr();">
+        </form>
+    </div>
+    <script>
+        function adding()
+        {
+            /* var x=frm1.txt1.value;
+               var y=frm1.txt2.value;
+               var s=parseInt(x)+parseInt(y);
+               frm1.txt3.value=s; */
+            var x=forms[0].elements[0].value;
+            var y=forms[0].elements[1].value;
+            var s=parseInt(x)+parseInt(y);
+            forms[0].elements[2].value=s;
+        }
+        function clr()
+        {
+           /*frm1.txt1.value="";
+             frm1.txt2.value="";
+             frm1.txt3.value="";
+             frm1.txt1.focus(); */
+            for(var i=0;i<3;i++)
+                forms[0].elements[i].value="";
+            forms[0].elements[0].focus();
+        }
+    </script>
+</body>
+</html>

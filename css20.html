@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #con{
+            padding: 10px;
+            background-color: blueviolet;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items:stretch;
+            flex-wrap: wrap;
+        }
+        .ibox{
+            padding: 10px;
+            background-color: lightgray;
+            margin: 5px;
+            border: 1px solid black;
+            flex:0 0 20%;
+        }
+       
+        @media (min-width:600px) and (max-width:768px){
+            .ibox{
+                flex:0px 0px 40%;
+            }
+        }
+        @media (min-width:400px) and (max-width:600px){
+            .ibox{
+                flex:0px 0px 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <div class="ibox">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus earum veritatis alias explicabo officia ea dicta natus, provident optio praesentium totam non quod pariatur aliquam veniam vero cupiditate. Adipisci, ullam!
+            Inventore eum obcaecati nostrum autem voluptates labore sed enim, repellat voluptatum numquam impedit odit perferendis dolore eaque ipsum dolorum quas rem mollitia quam accusantium consequuntur ea amet repellendus! Esse, cupiditate?
+            Dolore saepe dolorum doloribus obcaecati dolorem hic tempore labore repellat omnis quas consequuntur recusandae sed, ratione asperiores necessitatibus? Deleniti natus, cupiditate beatae odio minus iure excepturi non odit nesciunt minima.
+        </div>
+        <div class="ibox">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum animi quam. Earum praesentium iure fuga unde commodi, optio nisi eos, vero perferendis, corporis dicta reiciendis cumque at! Beatae, nulla.
+            Voluptates dignissimos quod a 
+        </div>
+        <div class="ibox">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora est ex minus omnis inventore? Ipsum nam soluta laudantium numquam sunt corporis mollitia minima, quis saepe fuga voluptas repudiandae harum.
+            Quod maiores placeat ipsa ea hic, nulla sunt, tempore adipisci, vitae eveniet consequuntur totam. Sint, molestias fugiat! Maxime beatae, perspiciatis vero, eos at libero temporibus laudantium minima, nostrum fugit officiis?
+            Ad enim architecto, sint facilis adipisci dignissimos 
+        </div>
+        <div class="ibox">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora est ex minus omnis inventore? Ipsum nam soluta laudantium numquam sunt corporis mollitia minima, quis saepe fuga voluptas repudiandae harum.
+            Quod maiores placeat ipsa ea hic, nulla sunt, tempore adipisci, vitae eveniet consequuntur totam. Sint, molestias fugiat! Maxime beatae, perspiciatis vero, eos at libero temporibus laudantium minima, nostrum fugit officiis?
+            Ad enim architecto, sint facilis adipisci dignissimos 
+        </div>
+    </div>
+</body>
+</html>
