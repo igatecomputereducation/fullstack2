@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+            
+
+        }
+        .txtcen{
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        function manip(){
+            var x=frm.fir.value;
+            var y=frm.sec.value;
+            frm.res.value=parseInt(x)+parseInt(y);
+        }
+    </script>
+</head>
+<body onload="frm.fir.focus()">
+    <br><br>
+    
+    <form name="frm">
+        <input type="text" name="fir">
+        <br><br>
+        <input type="text" name="sec">
+        <br><br>
+        <input type="text" name="res">
+        <br><br>
+        <input type="button" value="Add" onclick="manip()"> &nbsp;&nbsp;
+        <input type="button" value="Clear">
+    </form>
+</body>
+</html>

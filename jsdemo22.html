@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+ </head>
+<body class="bg-success">
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-3">
+                <select name="lst1" id="lst1" size="8" class="form-select">
+                </select>
+                <br><br>
+                <input type="text" name="txt1" id="txt1" class="form-control" autofocus autocomplete="off">
+                <br><br>
+                <input type="button" value="Add" id="btn1" class="btn btn-outline-light w-100">
+                <br><br>
+                <input type="button" value="Remove" id="btn2" class="btn btn-outline-light w-100">
+            </div>
+            <div class="col-md-2">
+                <br>
+                <input type="button" value=">" id="btn5"  class="btn btn-outline-light w-100 mx-auto d-block">
+                <br>
+                <input type="button" value=">>" id="btn6"  class="btn btn-outline-light w-100 mx-auto d-block">
+                <br>
+                <input type="button" value="<" id="btn7" class="btn btn-outline-light w-100 mx-auto d-block">
+                <br>
+                <input type="button" value="<<" id="btn8" class="btn btn-outline-light w-100 mx-auto d-block">
+            </div>
+            <div class="col-md-3">
+                <select name="lst2" id="lst2" size="8" class="form-select">
+                </select>
+                <br><br>
+                <input type="text" name="txt2" id="txt2" class="form-control" autocomplete="off">
+                <br><br>
+                <input type="button" value="Add" id="btn3" class="btn btn-outline-light w-100">
+                <br><br>
+                <input type="button" value="Remove" id="btn4" class="btn btn-outline-light w-100">
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+        function search_lst1(str){
+            var lst1=document.getElementById("lst1");
+            for(let i=0;i<lst1.length;i++)
+            {
+                if(lst1[i].text==str)
+                    return true;
+            }
+            return false;
+        }
+
+        document.getElementById("btn1").onclick=function(){
+            var x=document.getElementById("txt1").value;
+            if(x=="" || search_lst1(x))
+            {
+                document.getElementById("txt1").focus();
+                document.getElementById("txt1").select();
+            }
+            else
+            {
+                var opt=document.createElement("option");
+                opt.text=x;
+                document.getElementById("lst1").add(opt);
+                document.getElementById("txt1").value="";
+                document.getElementById("txt1").focus();
+            }
+        }
+
+        document.getElementById("btn2").onclick=function(){
+            var x=document.getElementById("lst1");
+            if(x.length==0)
+                alert("No elements to select");
+            else if(x.selectedIndex==-1)
+                alert("Item not selected");
+            else
+            {
+                x.remove(x.selectedIndex);
+            }
+
+        }
+        function search_lst2(str){
+            var lst2=document.getElementById("lst2");
+            for(let i=0;i<lst2.length;i++)
+            {
+                if(lst2[i].text==str)
+                    return true;
+            }
+            return false;
+        }
+
+
+
+        document.getElementById("btn3").onclick=function(){
+            var x=document.getElementById("txt2").value;
+            if(x=="" || search_lst2(x))
+            {
+                document.getElementById("txt2").focus();
+                document.getElementById("txt2").select();
+            }
+            else
+            {
+                var opt=document.createElement("option");
+                opt.text=x;
+                document.getElementById("lst2").add(opt);
+                document.getElementById("txt2").value="";
+                document.getElementById("txt2").focus();
+            }
+        }
+
+        document.getElementById("btn4").onclick=function(){
+            var x=document.getElementById("lst2");
+            if(x.length==0)
+                alert("No elements to select");
+            else if(x.selectedIndex==-1)
+                alert("Item not selected");
+            else
+            {
+                x.remove(x.selectedIndex);
+            }
+
+        }
+        
+
+        document.getElementById("btn5").onclick=function(){
+            var l1=document.getElementById("lst1");
+            var l2=document.getElementById("lst2");
+            if(l1.selectedIndex==-1)
+                alert("No item selected");
+            else if(l1.length==0)
+                alert("List is empty");
+            else
+            {
+                var t=l1[l1.selectedIndex].text;
+                if(search_lst2(t))
+                    alert("element existed");
+                else
+                {
+                    var x=document.createElement("option");
+                    x.text=t;
+                    l2.add(x);
+                }
+            }
+        }
+
+        document.getElementById("btn7").onclick=function(){
+            var l1=document.getElementById("lst1");
+            var l2=document.getElementById("lst2");
+            if(l2.selectedIndex==-1)
+                alert("No item selected");
+            else if(l2.length==0)
+                alert("List is empty");
+            else
+            {
+                var t=l2[l2.selectedIndex].text;
+                if(search_lst1(t))
+                    alert("element existed");
+                else
+                {
+                    var x=document.createElement("option");
+                    x.text=t;
+                    l1.add(x);
+                }
+            }
+        }
+
+
+        document.getElementById("btn6").onclick=function(){
+            var l1=document.getElementById("lst1");
+            var l2=document.getElementById("lst2");
+            if(l1.selectedIndex==-1)
+                alert("No item selected");
+            else if(l1.length==0)
+                alert("List is empty");
+            else
+            {
+                var t=l1[l1.selectedIndex].text;
+                if(search_lst2(t))
+                    alert("element existed");
+                else
+                {
+                    var x=document.createElement("option");
+                    x.text=t;
+                    l2.add(x);
+                    l1.remove(l1.selectedIndex);
+                }
+            }
+        }
+
+        document.getElementById("btn8").onclick=function(){
+            var l1=document.getElementById("lst1");
+            var l2=document.getElementById("lst2");
+            if(l2.selectedIndex==-1)
+                alert("No item selected");
+            else if(l2.length==0)
+                alert("List is empty");
+            else
+            {
+                var t=l2[l2.selectedIndex].text;
+                if(search_lst1(t))
+                    alert("element existed");
+                else
+                {
+                    var x=document.createElement("option");
+                    x.text=t;
+                    l1.add(x);
+                    l2.remove(l2.selectedIndex);
+                }
+            }
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function manip(){
+            var ul=document.getElementById("course");
+            /*
+            var x=document.createElement("li");
+            x.innerText="B.Tech";
+            ul.appendChild(x);
+            */
+           var z=document.createElement("li");
+           z.innerText="M.Tech";
+           ul.replaceChild(z,ul.children[0]);
+            /*
+            var y=document.createElement("li");
+            y.innerText="BDC";
+            ul.insertBefore(y,ul.children[2]);
+            */
+            //ul.removeChild(ul.children[2]);
+        }
+    </script>
+</head>
+<body>
+    <ul id="course">
+        <li>Bsc</li>    <!--children[0]-->
+        <li>Bcom</li>
+        <li>BCA</li>
+        <li>BBA</li>
+    </ul>
+    <input type="button" value="Click" onclick="manip()">
+</body>
+</html>

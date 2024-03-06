@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            /*
+            console.log("display of log");
+            console.error("display of error");
+            console.info("display of info");
+            console.warn("display of warning");
+            */
+           /*
+            var x=confirm("Are you 18 or above?");
+            if(x)
+                document.getElementById("msg").innerText="You can enroll your vote";
+            else
+                document.getElementById("msg").innerText="Have to wait..";
+          
+            */
+
+                var x=prompt("Enter your age:","18");
+                alert(x);
+          
+            }
+
+    </script>
+</head>
+<body style="text-align: center;">
+    <input type="button" value="click" onclick="display()">
+    <h1 id="msg"></h1>
+</body>
+</html>

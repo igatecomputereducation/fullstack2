@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-5">
+                Amount you need 
+                <input type="text" name="tamt" id="tamt" value="100000" class="form-control w-50 d-inline ms-2">
+                <br><br>
+                <input type="range" name="ramt" id="ramt" value="100000" min="50000" max="4000000" step="10000" class="form-range">
+                <div class="d-flex w-100 justify-content-between">
+                    <span>40000</span>
+                    <span>4000000</span>
+                </div>
+                <br><br>
+                Years
+                <input type="text" name="tyear" id="tyear" value="1" class="form-control w-50 d-inline ms-2">
+                <br><br>
+                <input type="range" name="ryear" id="ryear" value="1" min="1" max="5" step="1" class="form-range">
+                <div class="d-flex w-100 justify-content-between">
+                    <span>1Year</span>
+                    <span>5Years</span>
+                </div>
+                <br><br>
+                Rate of interest
+                <input type="text" name="trate" id="trate" value="10.5" class="form-control w-50 d-inline ms-2">
+                <br><br>
+                <input type="range" name="rrate" id="rrate" value="10.5" min="10.5" max="21" step="0.5" class="form-range">
+                <div class="d-flex w-100 justify-content-between">
+                    <span>10.5%</span>
+                    <span>21%</span>
+                </div>
+                <br><br>
+                <input type="button" value="Calculate" id="calc" class="btn btn-primary w-100">
+            </div>
+            <div class="col-md-5">
+                <div id="con" class="border p-4">
+
+                </div>
+            </div>
+            <div class="col-md-1">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+       
+        document.getElementById("ramt").onchange=function(){
+            document.getElementById("tamt").value=this.value;
+        }
+        
+        document.getElementById("tamt").onblur=function(){
+            docu.getElementById("ramt").value=this.value;
+        }
+
+
+        document.getElementById("ryear").onchange=function(){
+            document.getElementById("tyear").value=this.value;
+        }
+        
+        document.getElementById("rrate").onchange=function(){
+            document.getElementById("trate").value=this.value;
+        }
+        
+        document.getElementById("calc").onclick=function(){
+
+            var amt=parseInt(document.getElementById("tamt").value);
+            var years=parseInt(document.getElementById("tyear").value);
+            var rate=parseFloat(document.getElementById("trate").value);
+            var r=rate/12/100;
+            var n=years*12;
+            var emi=amt*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+            var res=`
+                Amount: ${amt} <br>
+                Years:  ${years} <br>
+                Rate of interest/year: ${rate} <br>
+                Emi: ${Math.round(emi)}
+            `;
+
+             document.getElementById("con").innerHTML=res;
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #con{
+            background-color: blueviolet;
+            padding:20% 10%;
+            text-align: center;
+        }
+        .box{
+            background-color: aliceblue;
+            color: blueviolet;
+            padding:20px 50px;
+            display:inline-block;
+            margin: 20px;
+        }
+        .box h1{
+            font: 3em Arial;
+        }
+    </style>
+    <script>
+       var h=5,m=1,s=59;
+       setInterval(() => {
+            document.getElementById("h").innerText=h;
+            document.getElementById("m").innerText=m;
+            document.getElementById("s").innerText=s;
+            if(h==0 && m==0 && s==0)
+            {
+                clearInterval();
+                document.getElementById("con").style.display="none";
+                alert("offer timeout");
+            }
+            if(m==0)
+            {
+                h--;
+                m=59;
+                s=59;
+            }
+            if(s==0)
+            {
+                m--;
+                s=59;
+            }
+            s=s-1;
+
+       }, 1000);        
+    </script>
+</head>
+<body>
+    <section id="con">
+        <div class="box">
+            <h1 id="h">12</h1>
+        </div>
+        <div class="box">
+            <h1 id="m">5</h1>
+        </div>
+        <div class="box">
+            <h1 id="s">20</h1>
+        </div>
+        <br><br><br>
+     </section>
+
+</body>    
+</html>

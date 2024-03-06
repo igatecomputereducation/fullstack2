@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #con{
+            background-color: blueviolet;
+            padding:20% 10%;
+            text-align: center;
+        }
+        .box{
+            background-color: aliceblue;
+            color: blueviolet;
+            padding:20px 50px;
+            display:inline-block;
+            margin: 20px;
+        }
+        .box h1{
+            font: 3em Arial;
+        }
+    </style>
+    <script>
+        setInterval(() => {
+            var d=new Date();
+            document.getElementById("h").innerText=d.getHours();
+            document.getElementById("m").innerText=d.getMinutes();
+            document.getElementById("s").innerText=d.getSeconds();
+        }, 1000);
+    </script>
+</head>
+<body>
+    <section id="con">
+        <div class="box">
+            <h1 id="h">12</h1>
+        </div>
+        <div class="box">
+            <h1 id="m">5</h1>
+        </div>
+        <div class="box">
+            <h1 id="s">20</h1>
+        </div>
+    </section>
+
+</body>    
+</html>
