@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid gray;
+            margin: 20px;
+            padding: 10px;
+        }
+        .imp{
+            border: 2px dotted green;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    
+    <input type="button" value="Click" id="btn1">
+    <br><br>
+    <p id="p1" class="box" align="center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo laborum tempore rerum amet officia optio ab, nam cum esse, quia ratione harum quaerat? Eveniet laudantium accusantium iusto expedita tenetur? Architecto.
+        Sint tempora ipsa ea modi ullam recusandae obcaecati nesciunt doloremque possimus aperiam odio blanditiis aspernatur laborum quaerat ad nulla deserunt voluptatem iste, id earum consequatur eius harum facilis numquam! Facilis!
+    </p>
+    
+
+    <script>
+        /*
+        document.getElementById("btn1").onclick=function(){
+            document.getElementById("p1").classList.remove("box");
+            document.getElementById("p1").classList.add("imp");
+        }
+        */
+
+        
+        $("#btn1").click(function(){
+           $("#p1").removeAttr("align");
+        })
+        
+        
+    </script>
+</body>
+</html>

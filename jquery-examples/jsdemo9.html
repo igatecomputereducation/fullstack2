@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function process(){
+           "use strict";
+           var p=document.getElementById("header");
+           p.removeChild(p.children[2]);
+
+           var x=document.createElement("h2");
+           x.innerText="Stay back..";
+           p.appendChild(x);
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>Hello world</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni ipsam corporis cupiditate harum unde ipsum id, itaque qui placeat. Iure, sit consectetur. Ratione, incidunt asperiores alias quaerat ut quis laudantium.</p>
+        <a href="#">go back</a>
+    </div>
+    <br><br>
+    <input type="button" value="click" onclick="process()">
+</body>
+</html>

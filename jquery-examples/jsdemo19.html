@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .light{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container m-2">
+        <div class="form-check form-switch">
+            <label for="chk1" class="form-check-label">Dark theme</label>
+            <input type="checkbox" name="chk1" id="chk1" class="form-check-input">
+        </div>
+
+        <h1 class="text-center">hello this is igate</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste ipsa quasi mollitia fugit quibusdam assumenda maxime aliquid, eum minima odio id ut, officia aspernatur deserunt, qui in! Sed, voluptatibus necessitatibus.
+        Modi, dicta! Sed neque nobis fugit ut quaerat iure eius commodi accusantium doloremque explicabo odit vel, temporibus laborum! Fugiat dolor, deserunt dicta velit cumque minima ducimus voluptate architecto placeat quaerat.
+        Incidunt facilis consectetur minus, explicabo ipsam nisi placeat aspernatur similique iste perferendis sequi exercitationem reiciendis ut mollitia ducimus! Pariatur tenetur non libero doloremque laudantium ad, cupiditate amet iusto ea dolore.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat eligendi dolor expedita commodi enim accusantium qui ducimus eum ea soluta sapiente reprehenderit non a, ratione ad aut, dolorem nostrum inventore.
+            Velit, quae tenetur. Illum cupiditate iusto rerum vero. Delectus perspiciatis minima error fugiat aliquid temporibus voluptate sequi dolor vitae ab distinctio mollitia numquam architecto similique voluptatibus nihil, commodi autem? Praesentium?
+            Repudiandae, veritatis excepturi temporibus deserunt odit illo quos consequatur blanditiis aliquid eveniet et perferendis obcaecati! Consectetur nesciunt placeat reprehenderit exercitationem veritatis provident porro ullam, iste quos dicta blanditiis at laboriosam.
+        </p>
+        <button class="btn btn-outline-dark" id="btn">Submit</button>
+    </div>
+    <script>
+        var d=document;
+        d.getElementById("chk1").onclick=function(){
+            if(this.checked)
+            {
+                d.getElementsByTagName("body")[0].className="dark";
+                d.getElementById("btn").classList.remove("btn-outline-dark");
+                d.getElementById("btn").classList.add("btn-outline-light");
+            }
+            else
+            {
+                d.getElementsByTagName("body")[0].className="light";
+                d.getElementById("btn").classList.remove("btn-outline-light");
+                d.getElementById("btn").classList.add("btn-outline-dark");
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

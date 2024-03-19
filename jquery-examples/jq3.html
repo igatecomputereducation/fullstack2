@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <div class="container m-4 border">
+        <div class="bg-success m-2 border p-3 text-white" id="d1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, adipisci debitis. Accusamus quibusdam ipsum debitis omnis a, possimus dolorum est earum dolor! Illo neque architecto quia soluta, sequi numquam nulla?
+        </div>
+        <br><br><br>
+        <button class="btn btn-danger text-white w-100 m-2">Click</button>
+    </div>
+    <script>
+       
+        $(".btn").click(function(){
+            $("#d1").animate({"width":"0px"},1000);
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

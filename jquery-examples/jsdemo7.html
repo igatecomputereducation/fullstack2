@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        function display(){
+           var h=document.createElement("h1");
+           h.innerText="hello world";
+           h.align="center";
+          //h.setAttribute("align","center");
+           h.style.color="green";
+           
+           var pr=document.createElement("p");
+           pr.innerText="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, magni nesciunt, aperiam non deleniti autem possimus soluta quis earum harum, aut perferendis laboriosam fugiat. Inventore ad velit officia provident cupiditate?";
+           //pr.align="justify";
+           pr.setAttribute("align","justify");
+           pr.style.padding="50px";
+        
+           var c=document.getElementById("cont");
+           c.appendChild(h);
+           c.appendChild(pr);
+        }
+    </script>
+</head>
+<body>
+    <div id="cont">
+
+    </div>
+    <input type="button" value="Click" onclick="display()">
+</body>
+</html>

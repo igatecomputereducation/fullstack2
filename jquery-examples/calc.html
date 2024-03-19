@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function adding(){
+            var x=parseInt(document.getElementById("txt1").value);
+            var y=parseInt(document.getElementById("txt2").value);
+            document.getElementById("txt3").value=x+y;
+        }
+        function clearing(){
+            document.getElementById("txt1").value="";
+            document.getElementById("txt2").value="";
+            document.getElementById("txt3").value="";
+            document.getElementById("txt1").focus();
+        }
+    </script>
+</head>
+<body>
+    <br><br><br>
+    <table cellspacing="0" cellpadding="10" align="center">
+        <tr>
+            <td>First</td>
+            <td><input type="text" name="txt1" id="txt1" autofocus></td>
+        </tr>
+        <tr>
+            <td>Second</td>
+            <td><input type="text" name="txt2" id="txt2"></td>
+        </tr>
+        <tr>
+            <td>Sum</td>
+            <td><input type="text" name="txt3" id="txt3"></td>
+        </tr>
+        <tr align="center">
+            <td><input type="button" value="Sum" id="add" onclick="adding()"></td>
+            <td><input type="button" value="Clear" id="cls" onclick="clearing()"></td>
+        </tr>
+    </table>
+</body>
+</html>

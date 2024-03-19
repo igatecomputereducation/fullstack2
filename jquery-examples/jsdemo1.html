@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body{
+            text-align: center;
+       }
+       img{
+            width: 50%;
+       }
+       input{
+            padding: 10px 25px;
+            margin: 20px;
+       }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <br><br><br>
+    <img src="./img/imac.jpg" alt="">
+    <form action="">
+        <input type="button" value="imac">
+        <input type="button" value="ipad">
+        <input type="button" value="iphone">
+    </form>
+    <script>
+        $("[value=imac]").click(function(){
+            $("img:first").attr("src","./img/imac.jpg");
+        })
+        $("[value=ipad]").click(function(){
+            $("img:first").attr("src","./img/ipad.jpg");
+        })
+        $("[value=iphone]").click(function(){
+            $("img:first").attr("src","./img/iphone.jpg");
+        })
+    </script>
+</body>
+</html>

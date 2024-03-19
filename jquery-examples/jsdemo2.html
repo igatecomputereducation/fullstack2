@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            text-align: center;
+        }
+        .txtcen{
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <br><br>
+    <form name="frm">
+        <input type="text" name="fir" id="fir" autofocus>
+        <br><br>
+        <input type="text" name="sec" id="sec">
+        <br><br>
+        <input type="text" name="res" id="res">
+        <br><br>
+        <input type="button" value="Add" id="b1"> &nbsp;&nbsp;
+        <input type="button" value="Clear" id="b2">
+    </form>
+    <script>
+        $("#b1").click(function(){
+            let x=parseInt($("#fir").val());
+            let y=parseInt($("#sec").val());
+            $("#res").val(x+y);
+        })
+        $("#b2").click(function(){
+            $("#fir").val("");
+            $("#sec").val("");
+            $("#res").val("");
+            $("#fir").focus();
+
+        })
+    </script>
+</body>
+</html>

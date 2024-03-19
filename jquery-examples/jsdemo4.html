@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1{
+            padding: 5px;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+function apply(){
+    document.getElementById("p1").innerText="<h1>hello world</h1>";
+    document.getElementById("p2").innerHTML="<h1>hello world</h1>";
+    document.getElementsByTagName("b")[0].outerHTML="<i>hello world</i>";
+}
+    </script>
+</head>
+<body>
+    <div id="p1">
+
+    </div>
+    <div id="p2">
+
+    </div>
+    <b>igate solutions</b>
+    <br><br>
+    <input type="button" value="ClickMe" onclick="apply()">
+</body>
+</html>

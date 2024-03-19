@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 60%;
+            margin: 0px auto;
+            padding: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <p id="para1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, tempore. Sit ducimus voluptate adipisci provident, doloremque ut obcaecati quaerat nihil, quos ipsa quidem maiores facere, aspernatur eligendi praesentium. Voluptatum, minus?
+            Rem voluptates nesciunt commodi pariatur saepe ipsa molestiae quis explicabo nobis, magnam odit architecto nam eligendi earum quidem tenetur? Itaque quam corrupti nobis mollitia inventore, fugiat beatae cupiditate officiis obcaecati.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, tempore. Sit ducimus voluptate adipisci provident, doloremque ut obcaecati quaerat nihil, quos ipsa quidem maiores facere, aspernatur eligendi praesentium. Voluptatum, minus?
+            Rem voluptates nesciunt commodi pariatur saepe ipsa molestiae quis explicabo nobis, magnam odit architecto nam eligendi earum quidem tenetur? Itaque quam corrupti nobis mollitia inventore, fugiat beatae cupiditate officiis obcaecati.
+        </p>
+    </div>
+
+    <p class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam obcaecati excepturi, non odio cum itaque at possimus, ex illo incidunt aut harum consectetur neque similique velit aliquid perspiciatis quod nesciunt.
+        Rem nobis optio reprehenderit officia aspernatur cupiditate beatae aut iste eos laudantium recusandae consectetur accusantium aliquid quibusdam ad, perferendis similique sunt adipisci? Unde, expedita recusandae. Assumenda incidunt ut tempora minima?
+        Incidunt fugit sunt harum, ut natus, minus, molestias eos doloribus libero quasi autem cumque aut atque eligendi neque consequatur in maiores et necessitatibus nesciunt molestiae quo? Quas repellendus corrupti laudantium.
+        <br><br>
+        <input type="radio" name="rad" checked> abc <br><br>
+        <input type="radio" name="rad"> xyz <br><br>
+        <input type="radio" name="rad"> pqr <br><br>
+        <h1 id="hd"></h1>
+    </p>
+
+    <script>
+        $("document").ready(function(){
+
+            $("#para1").css({"backgroundColor":"gray","padding":"50px","border":"1px solid gray"});
+            $(".container:eq(0)").css("border","2px solid black");
+            $(".container:eq(1)").css("border","2px dotted gray");
+
+            
+            /*
+            $("p:eq(0)").css("textAlign","center");
+            $("p:eq(1)").css("textAlign","right");
+            $("p:eq(2)").css("textAlign","justify");
+            */
+
+
+            var l=$("[name=rad]").length;
+            $("#hd").text(l);
+           
+
+        })
+    </script>
+</body>
+</html>
