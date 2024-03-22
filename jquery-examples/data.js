@@ -1,0 +1,12 @@
+{
+    "name":"Niharika",
+    "place":"Hydbad",
+    "course":"MTech",
+    "sem":1
+},
+{
+    "name":"Nilasa",
+    "place":"Thadepalli",
+    "course":"Bcom",
+    "sem":4
+}
