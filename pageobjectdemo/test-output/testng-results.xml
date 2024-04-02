@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-02T16:19:31 IST" name="Default suite" finished-at="2024-04-02T16:19:39 IST" duration-ms="8240">
+    <groups>
+    </groups>
+    <test started-at="2024-04-02T16:19:31 IST" name="Default test" finished-at="2024-04-02T16:19:39 IST" duration-ms="8240">
+      <class name="com.igate.TestCase1">
+        <test-method is-config="true" signature="loadPage()[pri:0, instance:com.igate.TestCase1@306e95ec]" started-at="2024-04-02T16:19:31 IST" name="loadPage" finished-at="2024-04-02T16:19:37 IST" duration-ms="6234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPage -->
+        <test-method signature="login()[pri:1, instance:com.igate.TestCase1@306e95ec]" started-at="2024-04-02T16:19:37 IST" name="login" finished-at="2024-04-02T16:19:39 IST" duration-ms="1959" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.igate.TestCase1@306e95ec]" started-at="2024-04-02T16:19:39 IST" name="close" finished-at="2024-04-02T16:19:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.igate.TestCase1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
