@@ -1,0 +1,7 @@
+16:27:14.693 [main] INFO  com.igate.Demo - *******Beginning of Demo execution ************
+16:27:14.696 [main] INFO  com.igate.Demo - Creating scanner object
+16:27:14.699 [main] INFO  com.igate.Demo - Accepted numerator
+16:27:16.960 [main] INFO  com.igate.Demo - Accepted denominator
+16:27:19.112 [main] INFO  com.igate.Demo - Calculating and printing division
+16:27:19.112 [main] INFO  com.igate.Demo - Operation success
+16:27:19.112 [main] INFO  com.igate.Demo - *******end of Demo execution ************

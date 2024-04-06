@@ -1,0 +1,14 @@
+16:22:16.060 [main] INFO  com.igate.Demo - *******Beginning of Demo execution ************
+16:22:16.063 [main] INFO  com.igate.Demo - Creating scanner object
+16:22:16.066 [main] INFO  com.igate.Demo - Accepted numerator
+16:22:20.227 [main] INFO  com.igate.Demo - Accepted denominator
+16:22:20.867 [main] INFO  com.igate.Demo - Calculating and printing division
+16:22:20.867 [main] INFO  com.igate.Demo - Operation success
+16:22:20.867 [main] INFO  com.igate.Demo - *******end of Demo execution ************
+16:23:13.028 [main] INFO  com.igate.Demo - *******Beginning of Demo execution ************
+16:23:13.030 [main] INFO  com.igate.Demo - Creating scanner object
+16:23:13.034 [main] INFO  com.igate.Demo - Accepted numerator
+16:23:15.931 [main] INFO  com.igate.Demo - Accepted denominator
+16:23:19.714 [main] INFO  com.igate.Demo - Calculating and printing division
+16:23:19.714 [main] ERROR com.igate.Demo - problem / by zero
+16:23:19.714 [main] INFO  com.igate.Demo - *******end of Demo execution ************
