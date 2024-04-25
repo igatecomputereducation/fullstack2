@@ -1,0 +1,67 @@
+16:11:02.548 [main] INFO  testbases.TestCaseBase - checking my account page
+16:11:03.104 [main] INFO  testbases.TestCaseBase - sucess
+16:11:03.107 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:11:03.107 [main] INFO  testbases.TestCaseBase - Opening home page
+16:11:04.224 [main] INFO  testbases.TestCaseBase - Opening login page
+16:11:04.868 [main] INFO  testbases.TestCaseBase - checking my account page
+16:11:04.869 [main] INFO  testbases.TestCaseBase - sucess
+16:11:04.875 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:11:04.876 [main] INFO  testbases.TestCaseBase - Opening home page
+16:11:05.977 [main] INFO  testbases.TestCaseBase - Opening login page
+16:11:06.608 [main] INFO  testbases.TestCaseBase - checking my account page
+16:11:06.608 [main] INFO  testbases.TestCaseBase - sucess
+16:18:13.370 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:18:13.374 [main] INFO  testbases.TestCaseBase - Opening home page
+16:18:14.543 [main] INFO  testbases.TestCaseBase - Opening login page
+16:18:15.291 [main] INFO  testbases.TestCaseBase - checking my account page
+16:18:15.826 [main] INFO  testbases.TestCaseBase - sucess
+16:18:15.846 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:18:15.846 [main] INFO  testbases.TestCaseBase - Opening home page
+16:18:16.952 [main] INFO  testbases.TestCaseBase - Opening login page
+16:18:17.681 [main] INFO  testbases.TestCaseBase - checking my account page
+16:18:18.231 [main] INFO  testbases.TestCaseBase - sucess
+16:18:18.236 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:18:18.236 [main] INFO  testbases.TestCaseBase - Opening home page
+16:18:19.347 [main] INFO  testbases.TestCaseBase - Opening login page
+16:18:19.998 [main] INFO  testbases.TestCaseBase - checking my account page
+16:18:19.998 [main] INFO  testbases.TestCaseBase - sucess
+16:18:20.003 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:18:20.004 [main] INFO  testbases.TestCaseBase - Opening home page
+16:18:21.117 [main] INFO  testbases.TestCaseBase - Opening login page
+16:18:21.758 [main] INFO  testbases.TestCaseBase - checking my account page
+16:18:21.759 [main] INFO  testbases.TestCaseBase - sucess
+16:20:18.474 [main] INFO  testbases.TestCaseBase - ****beg of TC_02_Login********
+16:20:18.491 [main] INFO  testbases.TestCaseBase - Click on login homepage login
+16:20:19.054 [main] INFO  testbases.TestCaseBase - checking in login page
+16:20:19.065 [main] INFO  testbases.TestCaseBase - In login page
+16:20:19.083 [main] INFO  testbases.TestCaseBase - Entering login data
+16:20:19.820 [main] INFO  testbases.TestCaseBase - In My Account page
+16:20:24.552 [main] INFO  testbases.TestCaseBase - Entering register data..
+16:20:31.315 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:20:31.315 [main] INFO  testbases.TestCaseBase - Opening home page
+16:20:32.600 [main] INFO  testbases.TestCaseBase - Opening login page
+16:20:33.407 [main] INFO  testbases.TestCaseBase - checking my account page
+16:20:33.997 [main] INFO  testbases.TestCaseBase - sucess
+16:20:34.003 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:20:34.003 [main] INFO  testbases.TestCaseBase - Opening home page
+16:20:35.216 [main] INFO  testbases.TestCaseBase - Opening login page
+16:20:35.957 [main] INFO  testbases.TestCaseBase - checking my account page
+16:20:36.516 [main] INFO  testbases.TestCaseBase - sucess
+16:20:36.518 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:20:36.518 [main] INFO  testbases.TestCaseBase - Opening home page
+16:20:37.653 [main] INFO  testbases.TestCaseBase - Opening login page
+16:20:38.308 [main] INFO  testbases.TestCaseBase - checking my account page
+16:20:38.308 [main] INFO  testbases.TestCaseBase - sucess
+16:20:38.315 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:20:38.315 [main] INFO  testbases.TestCaseBase - Opening home page
+16:20:39.417 [main] INFO  testbases.TestCaseBase - Opening login page
+16:20:40.038 [main] INFO  testbases.TestCaseBase - checking my account page
+16:20:40.039 [main] INFO  testbases.TestCaseBase - sucess
+16:23:50.664 [main] INFO  testbases.TestCaseBase - ****beg of TC_02_Login********
+16:23:50.685 [main] INFO  testbases.TestCaseBase - Click on login homepage login
+16:23:51.277 [main] INFO  testbases.TestCaseBase - checking in login page
+16:23:51.289 [main] ERROR testbases.TestCaseBase - Problem in loading login page
+16:23:55.065 [main] INFO  testbases.TestCaseBase - Entering register data..
+16:24:01.344 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:24:01.345 [main] INFO  testbases.TestCaseBase - Opening home page
+16:24:02.527 [main] INFO  testbases.TestCaseBase - Opening login page

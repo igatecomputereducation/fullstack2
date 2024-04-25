@@ -35,11 +35,6 @@ public class LoginPage {
 	public void clickLogin() {
 		login_btn.click();
 	}
+		
 	
-	public boolean isMyAccountVisible() {
-		if(myacct.isDisplayed())
-			return true;
-		else
-			return false;
-	}
 }

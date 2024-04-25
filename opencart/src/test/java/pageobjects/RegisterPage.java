@@ -43,6 +43,9 @@ public class RegisterPage {
 	@FindBy(xpath = "//input[@value='Continue']")
 	private WebElement btn_continue;
 	
+	@FindBy(xpath = "//a[normalize-space()='Continue']")
+	private WebElement your_store_con;
+	
 	public void setFirstName(String fname) {
 		f_name.sendKeys(fname);
 	}
@@ -82,6 +85,14 @@ public class RegisterPage {
 	
 	public void clickContinue() {
 		btn_continue.click();
+	}
+	
+	public void your_store_con() {
+		your_store_con.click();
+	}
+	
+	public boolean isMyAccountPageLoaded() {
+		return driver.getTitle().equals("My Account");
 	}
 	
 }

@@ -1,4 +1,27 @@
-15:36:40.225 [main] INFO  testbases.TestCaseBase - ***Beg of TC_01_register*****
-15:36:41.115 [main] INFO  testbases.TestCaseBase - Entering register data..
-16:17:49.318 [main] INFO  testbases.TestCaseBase - ***Beg of TC_01_register*****
-16:17:49.968 [main] INFO  testbases.TestCaseBase - Entering register data..
+16:24:03.233 [main] INFO  testbases.TestCaseBase - checking my account page
+16:24:03.776 [main] INFO  testbases.TestCaseBase - sucess
+16:24:03.782 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:24:03.783 [main] INFO  testbases.TestCaseBase - Opening home page
+16:24:05.056 [main] INFO  testbases.TestCaseBase - Opening login page
+16:24:05.755 [main] INFO  testbases.TestCaseBase - checking my account page
+16:24:06.290 [main] INFO  testbases.TestCaseBase - sucess
+16:24:06.293 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:24:06.295 [main] INFO  testbases.TestCaseBase - Opening home page
+16:24:07.425 [main] INFO  testbases.TestCaseBase - Opening login page
+16:24:08.078 [main] INFO  testbases.TestCaseBase - checking my account page
+16:24:08.078 [main] INFO  testbases.TestCaseBase - sucess
+16:24:08.085 [main] INFO  testbases.TestCaseBase - *********beg of login_data_entry************
+16:24:08.085 [main] INFO  testbases.TestCaseBase - Opening home page
+16:24:09.182 [main] INFO  testbases.TestCaseBase - Opening login page
+16:24:09.828 [main] INFO  testbases.TestCaseBase - checking my account page
+16:24:09.828 [main] INFO  testbases.TestCaseBase - sucess
+16:30:12.599 [main] INFO  testbases.TestCaseBase - ****beg of TC_02_Login********
+16:30:12.617 [main] INFO  testbases.TestCaseBase - Click on login homepage login
+16:30:13.198 [main] INFO  testbases.TestCaseBase - checking in login page
+16:30:13.206 [main] ERROR testbases.TestCaseBase - Problem in loading login page
+16:30:57.545 [main] INFO  testbases.TestCaseBase - ****beg of TC_02_Login********
+16:30:57.564 [main] INFO  testbases.TestCaseBase - Click on login homepage login
+16:30:58.127 [main] INFO  testbases.TestCaseBase - checking in login page
+16:30:58.137 [main] INFO  testbases.TestCaseBase - In login page
+16:30:58.162 [main] INFO  testbases.TestCaseBase - Entering login data
+16:30:58.894 [main] INFO  testbases.TestCaseBase - In My Account page

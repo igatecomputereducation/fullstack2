@@ -16,6 +16,7 @@ public class MyAccountPage {
 	@FindBy(xpath="//a[@class='list-group-item'][normalize-space()='Logout']")
 	WebElement logout;
 	
+
 	public void clickLogout() {
 		logout.click();
 	}

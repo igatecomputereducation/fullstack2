@@ -39,8 +39,9 @@ public class HomePage {
 		link_login.click();
 	}
 	
-	public boolean isLoginpageLoaded() {
-		return driver.getTitle().equals("Account Login");
+	
+	public boolean isInHomepage() {
+		return driver.getTitle().equals("Your Store");
 	}
 	
 }
