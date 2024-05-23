@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+    
+    function enqlist(){
+        $.ajax({
+                method: "get",
+                url: "enqlist.html"
+        })
+        .then(function(data){
+            $("#cont").html(data);
+                $.ajax({
+                    method: "GET",
+                    url: "http://localhost:3000/allenq"
+                })
+                .then(function(enqs){
+                    for(let i=0;i<enqs.length;i++){
+                    var row=`
+                        <tr>
+                            <td>${enqs[i].enqid}</td>
+                            <td>${enqs[i].name}</td>
+                            <td>${enqs[i].contact}</td>
+                            <td>${enqs[i].email}</td>
+                            <td>${enqs[i].sub}</td>
+                            <td>${enqs[i].msg}</td>
+                            <td>${enqs[i].dnt}</td>
+                            <td>
+                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal1" onClick="readEnq(${enqs[i].enqid})">Read</button>
+                                <input type="button" value="Delete" class="btn btn-danger" onClick="deleteEnq(${enqs[i].enqid})">
+                            </td>
+                        </tr>
+                    `;
+                    $("#tbl").append(row);
+                }
+    })
+    .catch(function(err){
+        alert("Something went wrong");
+    })
+            })
+            .catch(function(err){
+
+            })
+    }
+
+
+    function deleteEnq(enqid){
+        $.ajax({
+            method: "delete",
+            url: "http://localhost:3000/dlenq/"+enqid
+        })
+        .then(function(msg){
+            alert(msg);
+            enqlist();
+        })
+        .catch(function(err){
+            alert(err);
+        })
+    }
+
+    function readEnq(enqid){
+        $.ajax({
+            method: "get",
+            url: "http://localhost:3000/readenq/"+enqid
+        })
+        .then(function(data){
+            var content=`
+                <dl>
+                    <dt>Enqid</dt>
+                    <dd>${data.enqid}</dd>
+                    <dt>Name</dt>
+                    <dd>${data.name}</dd>
+                    <dt>Contact</dt>
+                    <dd>${data.contact}</dd>
+                    <dt>Email</dt>
+                    <dd>${data.email}</dd>
+                    <dt>Subject</dt>
+                    <dd>${data.sub}</dd>
+                    <dt>Message</dt>
+                    <dd>${data.msg}</dd>
+                </dl>
+
+            `;
+            $("#data").html(content);                   
+        })
+        .catch(function(err){
+            alert(err);
+        })
+        
+    }
+
+
+    function userslist(){
+        $.ajax({
+            method: "get",
+            url: "userlist.html"
+        })
+        .then(function(data){
+            $("#cont").html(data);
+            $.ajax({
+                method: "GET",
+                url: "http://localhost:3000/allusers"
+            })
+            .then(function(users){
+               
+                for(let i=0;i<users.length;i++){
+                    var row=`
+                        <tr>
+                            <td>${users[i].username}</td>
+                            <td>${users[i].password}</td>
+                            <td>${users[i].roll}</td>
+                            <td>
+                               <input type="button" value="Delete" class="btn btn-danger" onClick="dluser('${users[i].username}')">
+                            </td>
+                        </tr>
+                    `;
+                    $("#utbl").append(row);
+                }
+            })
+            .catch(function(err){
+                alert("Something went wrong");
+            })
+        })
+        .catch(function(err){
+
+        })
+     }
+
+     function dluser(username){
+                $.ajax({
+                    method: "delete",
+                    url: "http://localhost:3000/dluser/"+username
+                })
+                .then(function(msg){
+                    alert(msg);
+                    userslist();
+                })
+                .catch(function(err){
+                    alert(err);
+                })
+                
+    }
+
+
+
+    function createuser(){
+        $.ajax({
+            method: "get",
+            url: "adduser.html"
+        })
+        .then(function(data){
+            $("#cont").html(data);
+        })
+        .catch(function(err){
+
+        })
+    }
+
+
+    function addUser(){
+            $.ajax({
+                method: "get",
+                url: "http://localhost:3000/allusers"
+            })
+            .then(function(data){
+                var flag=false;
+                for(let i=0;i<data.length;i++){
+                    if($("#username").val()===data[i].username)
+                        flag=true;
+                }
+                
+                if(flag){
+                    $("#msg").html(`
+                        User name is already existed
+                    `);
+                    $("#username").val("");
+                    $("#password").val("");
+                    $("#username").focus();
+                }
+                else
+                {
+                    var roll;
+                    if($("#roll").prop("checked"))
+                        roll="admin";
+                    else
+                        roll="user";
+
+                    var data={
+                        "username": $("#username").val(),
+                        "password": $("#password").val(),
+                        "roll": roll
+                    }
+
+                    $.ajax({
+                        method: "post",
+                        url: "http://localhost:3000/cruser",
+                        data: data
+                    })
+                    .then(function(msg){
+                        alert(msg);
+                        userslist();
+                    })
+                    .catch(function(err){
+
+                    })
+                                         
+                }
+            })
+            .catch(function(err){
+
+            })
+        }
+
+        function authenticate(){
+            var data={
+                "username": $("#username").val(),
+                "password": $("#password").val()
+            };
+
+            $.ajax({
+                method: "post",
+                url: "http://localhost:3000/usravl",
+                data: data
+            })
+            .then(function(res){
+                if(res.status==="auth")
+                {
+                    $.cookie('status','auth',{expires:7,path:"/"});
+                    alert("you are welcome");
+                }
+                else
+                {
+                    alert("Invalid credentials");
+                    location.reload();
+                }
+
+            })
+            .catch(function(err){
+
+            })
+        }
+
+        function login(){
+            $.ajax({
+                method: "get",
+                url: "login.html"
+            })
+            .then(function(data){
+                $("#cont").html(data);
+            })
+        }
+
+        function changepwd(){
+            $.ajax({
+                method: "get",
+                url: "changepwd.html"
+            })
+            .then(function(data){
+                $("#cont").html(data);
+
+            })
+        }
+
+        function change(){
+            var x={
+                "username":$("#username").val(),
+                "password":$("#password").val()
+            };
+            $.ajax({
+                method: "post",
+                url: "http://localhost:3000/usravl",
+                data: x
+            })
+            .then(function(data){
+                if(data.status==="auth")
+                {
+                    var y={
+                        "username":$("#username").val(),
+                        "newpassword":$("#newpassword").val()
+                    };
+                    $.ajax({
+                        method: "patch",
+                        url: "http://localhost:3000/modusr",
+                        data: y
+                    })
+                    .then(function(msg){
+                        alert(msg);
+                        changepwd();
+                    })
+                    .catch(function(err){
+
+                    })
+
+                }
+                else
+                {
+                    alert("Check your credentials");
+                    changepwd();
+                }
+            })
+            .catch(function(err){
+
+            })
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 bg-dark text-center p-4" style="height: 100vh;">
+                <h4 class="text-light">Dash board</h4>
+                <button class="btn btn-light w-100 my-2" onclick="enqlist()">Enquiries</button>
+                <button class="btn btn-light w-100 my-2" onclick="userslist()">Users</button>
+                <button class="btn btn-light w-100 my-2" onclick="createuser()">Create User</button>
+                <button class="btn btn-light w-100 my-2" onclick="changepwd()">Change Password</button>
+                <button class="btn btn-light w-100 my-2" onclick="login()">Login</button>
+                <button class="btn btn-light w-100 my-2" id="logout">Logout</button>
+                
+            </div>
+            <div class="col-9">
+                <div id="cont">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js">
+
+    </script>
+</body>
+</html>
